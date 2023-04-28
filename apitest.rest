@@ -1,0 +1,19 @@
+@port=4400
+
+###
+GET http://localhost:{{port}}/greetings 
+
+###
+GET http://localhost:{{port}}/products 
+
+###
+GET http://localhost:{{port}}/contact
+
+###
+POST http://localhost:{{port}}/send
+Content-Type: application/json
+
+{
+    "greetings": "George Clooney"
+}
+
