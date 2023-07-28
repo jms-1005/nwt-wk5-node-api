@@ -3,10 +3,12 @@
 import express from 'express';
 import mysql from 'mysql2';
 import 'dotenv/config';
+import cors from 'cors';
 
 // Create an object 
 const server = express();
 server.use(express.json());
+server.use(cors());
 const port = 4400;
 
 // Configure port no for the server
