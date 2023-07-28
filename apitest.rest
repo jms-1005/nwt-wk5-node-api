@@ -17,3 +17,23 @@ Content-Type: application/json
     "greetings": "George Clooney"
 }
 
+###
+GET http://localhost:{{port}}
+
+###
+POST http://localhost:{{port}}/addnewproduct
+Content-Type: application/json
+
+{
+    "name": "NEW IPHONE",
+    "price": 999
+}
+
+###
+PUT http://localhost:{{port}}/updateproduct
+Content-Type: application/json
+
+{
+    "id": 1,
+    "price": 100000
+}
