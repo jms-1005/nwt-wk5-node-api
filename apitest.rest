@@ -1,10 +1,15 @@
 @port=4400
+###@url=https://sea-lion-app-ovmmi.ondigitalocean.app
+@url=http://localhost
 
 ###
-GET http://localhost:{{port}}/greetings 
+GET {{url}}:{{port}}/greetings 
 
-###
+### local
 GET http://localhost:{{port}}/products 
+
+### PROD
+GET https://sea-lion-app-ovmmi.ondigitalocean.app/products
 
 ###
 GET http://localhost:{{port}}/contact

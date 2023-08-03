@@ -16,22 +16,23 @@ server.listen(port, function(){
     console.log('Server started and running on port no', port);
 });
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
-    database: 'Store'
+    database: 'Store',
+    connectionLimit: 10
 })
 
-db.connect(function(error){
-    if(error){
-        console.log('Connection to SQL failed', error);
-    }
-   else{
-        console.log('Successfully connected to MySQL');
-   }
-})
+// db.connect(function(error){
+//     if(error){
+//         console.log('Connection to SQL failed', error);
+//     }
+//    else{
+//         console.log('Successfully connected to MySQL');
+//    }
+// })
 
 // Lets design the APIs
 
